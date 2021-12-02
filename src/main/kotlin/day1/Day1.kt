@@ -3,11 +3,12 @@ package day1
 import java.io.File
 
 
+private const val inputPath = "/day1/input.txt"
+
 class Day1 {
 
     fun solve1(): Int {
-        val path = "/day1/input.txt"
-        val url = Day1::class.java.getResource(path)!!
+        val url = Day1::class.java.getResource(inputPath)!!
         return File(url.file)
             .readLines()
             .map { it.toInt() }
@@ -16,8 +17,7 @@ class Day1 {
     }
 
     fun solve2(): Int {
-        val path = "/day1/input.txt"
-        val url = Day1::class.java.getResource(path)!!
+        val url = Day1::class.java.getResource(inputPath)!!
         return File(url.file)
             .readLines()
             .map { it.toInt() }
