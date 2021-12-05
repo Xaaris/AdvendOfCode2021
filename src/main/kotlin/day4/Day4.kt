@@ -14,9 +14,21 @@ class Day4 {
             for (board in boards) {
                 board.markNumber(drawnNumber)
                 if (board.checkBingo()) {
-                    board.mutableBoard.forEach { println(it) }
                     return board.calculateScore(drawnNumber)
                 }
+            }
+        }
+        throw Exception("Didn't find a bingo board")
+    }
+
+    fun solve2(): Int {
+        var (drawnNumbers, boards) = readInput()
+        for (drawnNumber in drawnNumbers) {
+            boards.forEach { it.markNumber(drawnNumber) }
+            if (boards.size > 1) {
+                boards = boards.filter { !it.checkBingo() }
+            } else {
+                return boards.first().calculateScore(drawnNumber)
             }
         }
         throw Exception("Didn't find a bingo board")
@@ -43,7 +55,7 @@ class Day4 {
     }
 }
 
-class Board(board: List<List<Int?>>) {
+data class Board(var board: List<List<Int?>>) {
 
     var mutableBoard: MutableList<MutableList<Int?>> = board.map { it.toMutableList() }.toMutableList()
 
@@ -85,4 +97,5 @@ class Board(board: List<List<Int?>>) {
 
 fun main() {
     println(Day4().solve1())
+    println(Day4().solve2())
 }
