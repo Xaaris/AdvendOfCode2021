@@ -1,11 +1,11 @@
-package day4
+package day04
 
 import java.io.File
 
 
-class Day4 {
-    private val inputPath = "/day4/input.txt"
-    private val url = Day4::class.java.getResource(inputPath)!!
+class Day04 {
+    private val inputPath = "/day04/input.txt"
+    private val url = Day04::class.java.getResource(inputPath)!!
     private val inputFile = File(url.file)
 
     fun solve1(): Int {
@@ -96,6 +96,6 @@ data class Board(var board: List<List<Int?>>) {
 
 
 fun main() {
-    println(Day4().solve1())
-    println(Day4().solve2())
+    println(Day04().solve1())
+    println(Day04().solve2())
 }

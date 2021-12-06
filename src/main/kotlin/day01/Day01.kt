@@ -1,14 +1,14 @@
-package day1
+package day01
 
 import java.io.File
 
 
-private const val inputPath = "/day1/input.txt"
+private const val inputPath = "/day01/input.txt"
 
-class Day1 {
+class Day01 {
 
     fun solve1(): Int {
-        val url = Day1::class.java.getResource(inputPath)!!
+        val url = Day01::class.java.getResource(inputPath)!!
         return File(url.file)
             .readLines()
             .map { it.toInt() }
@@ -17,7 +17,7 @@ class Day1 {
     }
 
     fun solve2(): Int {
-        val url = Day1::class.java.getResource(inputPath)!!
+        val url = Day01::class.java.getResource(inputPath)!!
         return File(url.file)
             .readLines()
             .map { it.toInt() }
@@ -29,6 +29,6 @@ class Day1 {
 }
 
 fun main() {
-    println(Day1().solve1())
-    println(Day1().solve2())
+    println(Day01().solve1())
+    println(Day01().solve2())
 }

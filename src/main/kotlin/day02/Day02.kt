@@ -1,15 +1,15 @@
-package day2
+package day02
 
-import day2.Direction.*
+import day02.Direction.*
 import java.io.File
 
 
-private const val inputPath = "/day2/input.txt"
+private const val inputPath = "/day02/input.txt"
 
-class Day2 {
+class Day02 {
 
     fun solve1(): Int {
-        val url = Day2::class.java.getResource(inputPath)!!
+        val url = Day02::class.java.getResource(inputPath)!!
         val submarine = Submarine1()
         File(url.file)
             .readLines()
@@ -20,7 +20,7 @@ class Day2 {
 
     fun solve2(): Int {
         val submarine = Submarine2()
-        val url = Day2::class.java.getResource(inputPath)!!
+        val url = Day02::class.java.getResource(inputPath)!!
         File(url.file)
             .readLines()
             .map { it.toCommand() }
@@ -77,6 +77,6 @@ enum class Direction {
 }
 
 fun main() {
-    println(Day2().solve1())
-    println(Day2().solve2())
+    println(Day02().solve1())
+    println(Day02().solve2())
 }

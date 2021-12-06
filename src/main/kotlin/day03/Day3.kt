@@ -1,11 +1,11 @@
-package day3
+package day03
 
 import java.io.File
 
 
-class Day3 {
-    private val inputPath = "/day3/input.txt"
-    private val url = Day3::class.java.getResource(inputPath)!!
+class Day03 {
+    private val inputPath = "/day03/input.txt"
+    private val url = Day03::class.java.getResource(inputPath)!!
     private val inputFile = File(url.file)
 
     fun solve1(): Int {
@@ -76,6 +76,6 @@ class Day3 {
 
 
 fun main() {
-    println(Day3().solve1())
-    println(Day3().solve2())
+    println(Day03().solve1())
+    println(Day03().solve2())
 }

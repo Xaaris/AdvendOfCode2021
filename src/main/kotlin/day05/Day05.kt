@@ -1,12 +1,12 @@
-package day5
+package day05
 
 import java.io.File
 import kotlin.math.abs
 
 
-class Day5 {
-    private val inputPath = "/day5/input.txt"
-    private val url = Day5::class.java.getResource(inputPath)!!
+class Day05 {
+    private val inputPath = "/day05/input.txt"
+    private val url = Day05::class.java.getResource(inputPath)!!
     private val inputFile = File(url.file)
 
     fun solve1(): Int {
@@ -61,6 +61,6 @@ data class Line(val x1: Int, val y1: Int, val x2: Int, val y2: Int) {
 }
 
 fun main() {
-    println(Day5().solve1())
-    println(Day5().solve2())
+    println(Day05().solve1())
+    println(Day05().solve2())
 }
